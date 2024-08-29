@@ -1,0 +1,27 @@
+<% if flash[:notice] %>
+  <div>
+    <button type="button" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div>
+      <%= flash[:notice].html_safe %>
+    </div>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div>
+    <button type="button" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div>
+      <%= flash[:alert].html_safe %>
+    </div>
+  </div>
+<% end %>
+<% if flash[:error] %>
+  <div>
+    <div>
+      <%= flash[:error].html_safe %>
+    </div>
+  </div>
+<% end %>
